@@ -21,7 +21,7 @@ consumer = KafkaConsumer(
 )
 
 topics = consumer.topics()
-cdp_topics = [topic for topic in consumer.topics() if re.match(topic_pattern, topic)]
+cdp_topics = [topic for topic in topics if re.match(topic_pattern, topic)]
 topics_amount = len(cdp_topics)
 counter = 0
 
